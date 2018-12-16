@@ -1,0 +1,50 @@
+package com.itheima.util;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBCUtil {
+	public static void release(ResultSet rs,Statement st,Connection conn) {
+		closeRs(rs);
+		closeSt(st);
+		closeConn(conn);
+	}
+	private static void closeRs(ResultSet rs) {
+		try {
+			if(rs !=null) {
+				rs.close();		
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			rs = null;
+		}
+	}
+	private static void closeSt(Statement st) {
+		try {
+			if(st !=null) {
+				st.close();	
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			st = null;
+		}
+	}
+	private static void closeConn(Connection conn) {
+		try {
+			if(conn != null) {
+				conn.close();	
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			conn = null;
+		}
+	}
+}

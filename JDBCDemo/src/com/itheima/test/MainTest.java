@@ -1,0 +1,37 @@
+package com.itheima.test;
+
+import java.sql.Statement;
+
+import com.itheima.util.JDBCUtil;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+
+public class MainTest {
+
+  public static void main(String[] args) {
+    Connection conn = null;
+    Statement st = null;
+    ResultSet rs = null;
+    try {
+      st = JDBCUtil.getConn().createStatement();
+      String sql = "select * from t_stu";
+      rs = st.executeQuery(sql);
+
+      while (rs.next()) {
+        int id = rs.getInt("id");
+        String name = rs.getString("name");
+        int age = rs.getInt("age");
+
+        System.out.println("id=" + id + ",name=" + name + ",age=" + age);
+      }
+    } catch (SQLException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } finally {
+      JDBCUtil.release(rs, st, conn);
+    }
+  }
+
+}

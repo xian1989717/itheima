@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>D:/java视频/黑马49期JAVA视频教程{按编号顺序学习}【推荐学习】/08.JDBC(共30集)/code&amp;资料/mysql-connector-java-5.1.7/src</location>
+		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>C:/Program Files/Java/jre1.8.0_191/lib/cmm</location>
+		</link>
+	</linkedResources>
+</projectDescription>
